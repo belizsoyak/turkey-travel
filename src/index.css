@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.recommend-btn {
+  background-color: #803300;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Home */
+.home {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.home h2 {
+  font-size: 2.5rem;
+}
+
+.home p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.browse-btn {
+  background-color: #803300;
+  color: white;
+  font-family: 'Georgia', serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+.logo a {
+  cursor: pointer;
+}
