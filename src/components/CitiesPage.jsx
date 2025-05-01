@@ -39,19 +39,25 @@ export default function CitiesPage() {
         <p>Select a city to get started:</p>
         <CitySelector selectedCity={city} onSelectCity={setCity} />
 
-        {city && (
-          <p>You selected: {city}</p>
-        )}
-
         {loading && <p>Loading weather...</p>}
 
         {weather && (
           <div className={`weather-info ${weather ? 'show' : ''}`}>
-            Right now, the weather in <strong>{city}</strong> is {weather.desc}, {weather.temp}°C.
-            <img src={weather.icon} alt="Weather icon" className="weather-icon" />
+            <p>
+              Right now, the weather in <strong>{city}</strong> is {weather.desc}, {weather.temp}°C.
+              <img src={weather.icon} alt="Weather icon" className="weather-icon" />
+            </p>
+            <a
+              href={`https://www.google.com/maps/search/${city}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="maps-link"
+            >
+              View {city} on Google Maps
+            </a>
           </div>
         )}
-      </div>
     </div>
+  </div>
   );
 }
