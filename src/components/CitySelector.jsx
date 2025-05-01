@@ -31,9 +31,9 @@ const cities = [
     'Karaman'
   ];
 
-  export default function CitySelector() {
+  export default function CitySelector({ selectedCity, onSelectCity }) {
     return (
-      <select>
+      <select value={selectedCity} onChange={(e) => onSelectCity(e.target.value)}>
         <option value="">-- Choose a city --</option>
         {cities.map((city, index) => (
           <option key={index} value={city}>{city}</option>

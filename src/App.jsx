@@ -16,7 +16,7 @@ function App() {
       <CityShowcase />
 
     <div>
-      <h1>Our mission...</h1>
+      <h1>Let's explore...</h1>
     </div>
 
     </>
