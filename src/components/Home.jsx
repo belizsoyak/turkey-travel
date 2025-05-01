@@ -7,8 +7,8 @@ function Home() {
     <section className="home">
       <h1>Welcome to Turkey!</h1>
       <p>Where would you like to visit today?</p>
-      <button onClick={() => navigate('/cities')} className="recommend-btn" >
-        Click to plan a trip!
+      <button onClick={() => navigate('/cities')} className="saved-btn" >
+        Click to explore a city!
         </button>
     </section>
   );

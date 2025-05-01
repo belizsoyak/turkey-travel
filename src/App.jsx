@@ -14,11 +14,7 @@ function App() {
     <>
       <Home />
       <CityShowcase />
-
-    <div>
-      <h1>Let's explore...</h1>
-    </div>
-
+      
     </>
   );
 }
