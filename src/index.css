@@ -193,3 +193,10 @@ body {
   gap: 20px;
   justify-content: center;
 }
+
+.saved-cities-page h1 {
+  text-align: center;
+  color: #803300; /* senin tema rengin */
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}

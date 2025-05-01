@@ -16,18 +16,33 @@ mongoose.connect('mongodb://127.0.0.1:27017/travel')
   })
   .catch(err => console.error('MongoDB connection error:', err));
 
+// Define the City model ✅ (this is the key part you missed!)
+const CitySchema = new mongoose.Schema({
+  name: String,
+  image: String,  // optional but you have it in the request
+});
+const City = mongoose.model('City', CitySchema);
 
-// Define a simple schema/model to read your test doc
-const TestSchema = new mongoose.Schema({ name: String });
-const Test = mongoose.model('Test', TestSchema);
-
-// GET /savedCities (just for testing!)
+// GET /savedCities
 app.get('/savedCities', async (req, res) => {
   try {
-    const docs = await Test.find();
-    res.json(docs);
+    const cities = await City.find();
+    res.json(cities);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Error fetching from DB' });
+  }
+});
+
+// POST /savedCities ✅ now fully works
+app.post('/savedCities', async (req, res) => {
+  const { name, image } = req.body;
+  try {
+    const city = new City({ name, image });
+    await city.save();
+    res.json(city);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Error saving to DB' });
   }
 });

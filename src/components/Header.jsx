@@ -12,7 +12,7 @@ function Header() {
           <ul className="nav-links">
             <li>
               <Link to="/saved" className="saved-btn">
-                To-Visit Bucket List
+                Traveling Bucket List
               </Link>
             </li>
           </ul>
