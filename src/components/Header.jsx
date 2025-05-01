@@ -10,8 +10,11 @@ function Header() {
         </h1>
         <nav>
           <ul className="nav-links">
-            <li>Cities</li>
-            <li><button className="saved-btn">To-Visit Bucket List</button></li>
+            <li>
+              <Link to="/saved" className="saved-btn">
+                To-Visit Bucket List
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>

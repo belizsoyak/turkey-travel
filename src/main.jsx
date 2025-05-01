@@ -4,7 +4,9 @@ import './index.css';
 import App from './App.jsx';
 import CitiesPage from './components/CitiesPage';
 import Layout from './components/Layout';
+import SavedCitiesPage from './components/SavedCitiesPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +15,7 @@ createRoot(document.getElementById('root')).render(
         <Route element={<Layout />}>
           <Route path="/" element={<App />} />
           <Route path="/cities" element={<CitiesPage />} />
+          <Route path="/saved" element={<SavedCitiesPage />} />
         </Route>
       </Routes>
     </Router>

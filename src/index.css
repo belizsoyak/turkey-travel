@@ -37,6 +37,14 @@ body {
   background-color: #a34700;
 }
 
+.floating-save-btn {
+  position: absolute;
+  right: -200px; /* Adjust as needed to stay outside the white card */
+  bottom: 300px; /* Align vertically with the map area */
+  width: 180px; /* Make it wide enough for two lines of text */
+  text-align: center;
+}
+
 /* Home */
 .home {
   text-align: center;
@@ -75,22 +83,28 @@ body {
 }
 
 /* Cities page */
-.cities-page {
+.cities-page-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   padding: 2rem;
 }
+
+.cities-page {
+  display: flex;
+  position: relative;
+  max-width: 900px; 
+}
+
 
 .city-card {
   background: #fff;
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 100%;
+  width: 500px;
   text-align: center;
 }
+
 
 .city-card h1 {
   margin-bottom: 1rem;
@@ -155,7 +169,27 @@ body {
   color: #b34700;
 }
 
-.map-container {
-  border: 2px solid #ccc;
-  border-radius: 10px;
+/* Heart styles */
+.floating-heart {
+  position: absolute;
+  right: -200px; /*  outside card */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 6rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.floating-heart:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* Saved cities */
+.saved-cities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }

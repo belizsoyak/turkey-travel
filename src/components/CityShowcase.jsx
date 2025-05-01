@@ -159,3 +159,5 @@ export default function CityShowcase() {
     </div>
   );
 }
+
+export const citiesData = cities;
