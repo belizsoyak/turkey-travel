@@ -23,6 +23,10 @@ const CitySchema = new mongoose.Schema({
 });
 const City = mongoose.model('City', CitySchema);
 
+City.deleteMany({})
+  .then(() => console.log('✅ Cleared all saved cities (fresh start).'))
+  .catch(err => console.error('Failed to clear cities:', err));
+
 // GET /savedCities
 app.get('/savedCities', async (req, res) => {
   try {
