@@ -8,10 +8,10 @@ export default function CitiesPage() {
 
   useEffect(() => {
     if (!city) return;
-  
+
     const apiKey = 'e247fc6f87784bb38f943018250105';
     const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
-  
+
     setLoading(true);
     console.log('Fetching weather for:', city);
     fetch(url)
@@ -31,28 +31,27 @@ export default function CitiesPage() {
         setLoading(false);
       });
   }, [city]);
-  
 
   return (
     <div className="cities-page">
-      <h1>Cities</h1>
-      <p>Select a city to get started:</p>
-      <CitySelector selectedCity={city} onSelectCity={setCity} />
+      <div className="city-card">
+        <h1>Cities</h1>
+        <p>Select a city to get started:</p>
+        <CitySelector selectedCity={city} onSelectCity={setCity} />
 
-      {city && (
-        <p>You selected: {city}</p>
-      )}
+        {city && (
+          <p>You selected: {city}</p>
+        )}
 
-      {loading && <p>Loading weather...</p>}
+        {loading && <p>Loading weather...</p>}
 
-      {weather && (
-        <div className="weather-info">
-        <p>
-          Right now, the weather in <strong>{city}</strong> is {weather.desc}, {weather.temp}°C.
-        </p>
-        <img src={weather.icon} alt={weather.desc} />
+        {weather && (
+          <div className={`weather-info ${weather ? 'show' : ''}`}>
+            Right now, the weather in <strong>{city}</strong> is {weather.desc}, {weather.temp}°C.
+            <img src={weather.icon} alt="Weather icon" className="weather-icon" />
+          </div>
+        )}
       </div>
-      )}
     </div>
   );
 }
