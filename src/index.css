@@ -1,0 +1,189 @@
+
+body {
+  margin: 0;
+  font-family: 'newsreader', serif;
+  background-color: #f9f9f9;
+}
+
+/* navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* saved button */
+
+.saved-btn {
+  background-color: #803300;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'newsreader', serif;
+  transition: background-color 0.3s ease;
+}
+
+.saved-btn:hover {
+  background-color: #a34700;
+}
+
+.floating-save-btn {
+  position: absolute;
+  right: -200px; 
+  bottom: 300px; 
+  width: 180px; 
+  text-align: center;
+}
+
+/* home */
+.home {
+  text-align: center;
+  margin-top: 80px;
+  padding: 1rem;
+}
+
+.home h2 {
+  font-size: 2.5rem;
+}
+
+.home p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* browse button */
+.browse-btn {
+  background-color: #803300;
+  color: white;
+  font-family: 'Georgia', serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.browse-btn:hover {
+  background-color: #a34700;
+}
+
+.logo a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* cities page */
+.cities-page-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.cities-page {
+  display: flex;
+  position: relative;
+  max-width: 900px; 
+}
+
+
+/* city card */
+.city-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  text-align: center;
+}
+
+.city-card h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.city-card p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.city-card select {
+  width: 100%;
+  max-width: 250px;
+  margin: 1rem auto;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+/* weather */
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  text-align: center;
+}
+
+.weather-info.show {
+  opacity: 1;
+}
+
+.weather-info strong {
+  font-size: 1.3rem;
+  color: #803300;
+}
+
+.weather-info img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.maps-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #803300;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.maps-link:hover {
+  color: #b34700;
+}
+
+
+/* saved cities page */
+.saved-cities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.saved-cities-page h1 {
+  text-align: center;
+  color: #803300;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
